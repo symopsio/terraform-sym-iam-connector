@@ -33,6 +33,8 @@ workflows:
   generate_docs:
     jobs:
       - documentation:
+          context:
+            - infrastructure-github-token
           filters:
             branches:
               only: main
