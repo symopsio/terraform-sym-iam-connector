@@ -1,3 +1,14 @@
+# Deprecation Warning
+The `symopsio/iam-connector/sym` module is deprecated as of September 30, 2022. Please migrate to `symopsio/iam-connector/aws`. This can be done in your module declarations by replacing the `symopsio/iam-connector/sym` source argument with `symopsio/iam-connector/aws`.
+
+```
+module "iam_connector" {
+  source  = "symopsio/iam-connector/aws"
+  version = "1.0.0"
+  # insert the 3 required variables here
+}
+```
+
 # iam-connector
 
 The `iam-connector` module provisions an IAM role that the [AWS IAM Strategy](https://docs.symops.com/docs/aws-iam) can use to escalate or de-escalate users via AWS IAM groups.
